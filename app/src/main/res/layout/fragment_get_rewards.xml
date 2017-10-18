@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_arror_left_white"
+            android:drawablePadding="3dp"
+            android:paddingTop="20dp"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <include
+            android:id="@+id/reward_detail_bottom_description"
+            layout="@layout/item_reward_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <include
+            android:id="@+id/offer_header"
+            layout="@layout/item_offer_big_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reward_detail_bottom_description" />
+
+        <aroundwise.nepi.util.views.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/offer_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/viewpager"
+            android:background="@drawable/bottom_shadow" />
+
+        <aroundwise.nepi.util.views.CirclePageIndicator
+            android:id="@+id/viewpager_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/offer_header"
+            android:layout_marginBottom="40dp"
+            android:layout_toLeftOf="@+id/rl_btn_glow"
+            android:layout_toRightOf="@+id/btn_like"
+            android:padding="2dp"
+            app:fillColor="@color/pager_on"
+            app:pageColor="@color/pager_off"
+            app:strokeColor="@color/pager_on"
+            app:strokeWidth="0dp" />
+
+        <Button
+            android:id="@+id/btn_like"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/offer_header"
+            android:background="@drawable/selector_reward_heart" />
+
+        <RelativeLayout
+            android:id="@+id/rl_btn_glow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/reward_detail_bottom_description"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="40dp">
+
+            <aroundwise.nepi.util.views.SAutoBgButton
+                android:id="@+id/btn_get_points"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_reward_button"
+                android:text="@string/get_more_points"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/glow"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/glow_fulll"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+        <include
+            layout="@layout/layout_badge_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp" />
+
+        <include
+            android:id="@+id/rl_reward_header"
+            layout="@layout/header_reward"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/top_shadow" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

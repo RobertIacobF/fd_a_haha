@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:padding="6dp">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_dialog_close_button"
+            android:paddingTop="12dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_close"
+        android:layout_marginTop="38dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/tv_store_name"
+                    style="@style/tv_dialog_store_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_store_type"
+                    style="@style/tv_dialog_store_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_store_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tv_store_info_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_description"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@+id/rl_title"
+                android:paddingTop="20dp">
+
+
+                <TextView
+                    android:id="@+id/tv_store_description"
+                    style="@style/tv_dialog_store_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/demo_text"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tv_store_info_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_store_mall"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/rl_description">
+
+                <TextView
+                    android:id="@+id/tv_store_mall"
+                    style="@style/tv_dialog_store_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tv_store_info_color" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/dialog_bottom"
+                layout="@layout/dialog_store_info_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_store_mall" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@+id/rl_close"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/iv_store_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/icon_dialog_white_circle"
+            android:padding="10dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_phone_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_store_logo"
+            android:background="@drawable/icon_dialog_phone_call"
+            android:visibility="gone" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_phone_call"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_store_logo"
+            android:background="@drawable/icon_dialog_phone_call" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_location"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_store_logo"
+            android:background="@drawable/icon_dialog_location" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

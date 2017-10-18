@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wholeItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp">
+
+
+    <LinearLayout
+        android:id="@+id/tolLL"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvQuestionPoints"
+            fontPath="fonts/ProximaNova-Bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tolLL" />
+
+    <!--<LinearLayout
+        android:id="@+id/middleLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLine"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/poll_multiple_row_selector">
+
+            <ImageView
+                android:id="@+id/ivRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/poll_multiple_selector" />
+
+            <TextView
+                android:id="@+id/tvRow1"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/ivRow1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/poll_multiple_row_selector">
+
+            <ImageView
+                android:id="@+id/ivRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/poll_multiple_selector" />
+
+            <TextView
+                android:id="@+id/tvRow2"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/ivRow2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/poll_multiple_row_selector">
+
+            <ImageView
+                android:id="@+id/ivRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/poll_multiple_selector" />
+
+            <TextView
+                android:id="@+id/tvRow3"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/ivRow3" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>-->
+
+    <aroundwise.nepi.util.views.SAutoBgButton
+        android:id="@+id/pollSubmitButton"
+        fontPath="fonts/ProximaNova-Bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/recycler_questions"
+        android:background="@color/white"
+        android:text="@string/poll_submit"
+        android:textColor="#f80a6e" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tolLL"
+        android:background="@color/black30alpha"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/pollSubmitButton"
+        android:background="@color/black30alpha"
+        />
+
+
+</RelativeLayout>

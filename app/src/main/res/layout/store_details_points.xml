@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_getpoints"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B2ffffff" />
+
+        <ImageView
+            android:id="@+id/iv_getpoints_blurred"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_store_get_points"
+            style="@style/tv_store_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_points_caps"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tv_store_get_points"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_get_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/divider"
+                android:background="@drawable/shape_store_details_get_points_right"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_stores_points_left"
+                    style="@style/tv_stores_nr_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textColor="#f80a4d" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_stores_points_left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_buy_label_puncte"
+                        style="@style/tv_stores_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#3b3b3b" />
+
+                    <TextView
+                        android:id="@+id/tv_for_action_left"
+                        style="@style/tv_stores_for_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/for_1_purchase"
+                        android:textColor="#3b3b3b" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="#e8e8e8" />
+
+            <RelativeLayout
+                android:id="@+id/rl_walk_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/divider"
+                android:background="@drawable/shape_store_details_get_points_left"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/tv_stores_points_right"
+                    style="@style/tv_stores_nr_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textColor="#f80a4d" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_stores_points_right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_walkin_label_puncte"
+                        style="@style/tv_stores_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#3b3b3b" />
+
+                    <TextView
+                        android:layout_marginRight="6dp"
+                        android:id="@+id/tv_for_action_right"
+                        style="@style/tv_stores_for_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/for_walk_ins_details"
+                        android:textColor="#3b3b3b" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

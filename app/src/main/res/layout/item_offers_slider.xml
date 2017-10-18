@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+
+    <aroundwise.nepi.util.views.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </aroundwise.nepi.util.views.CustomViewPager>
+
+    <aroundwise.nepi.util.views.CirclePageIndicator
+        android:id="@+id/viewpager_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="1dp"
+        app:fillColor="@color/pager_on"
+        app:pageColor="@color/pager_off"
+        app:strokeColor="@color/pager_on"
+        app:strokeWidth="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/mainText"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Primavara in garderoba"
+            android:textColor="@color/black50alpha"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/secondText"
+            fontPath="fonts/ProximaNova-Regular.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Primavara in garderoba"
+            android:textColor="@color/pager_off"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.mainActivity.fragments.mainFragment.MainFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/the_most_fulfilling"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/login_text_color"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:gravity="center"
+                android:text="@string/shopping_experience"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/login_text_color"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_terms_and_coniditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/politic_de_confiden_ialitate"
+            android:textColor="@color/login_text_color" />
+
+        <TextView
+            android:id="@+id/btn_regulament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_terms_and_coniditions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/login_text_color" />
+
+        <TextView
+            android:id="@+id/tv_text_register"
+            style="@style/RegisterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_buttons"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/ai_cont_pe_siteurile_promenada_sau_mega_mall_te_poti_loga_direct" />
+
+        <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_facebook"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <aroundwise.nepi.util.views.SAutoBgButton
+
+                android:id="@+id/btn_login"
+                style="@style/LoginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:text="@string/login" />
+
+            <aroundwise.nepi.util.views.SAutoBgButton
+                android:id="@+id/btn_sign_up"
+                style="@style/LoginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:text="@string/sign_up" />
+        </LinearLayout>
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_facebook"
+            fontPath="fonts/Montserrat-Bold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_above="@+id/btn_regulament"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_facebook_button"
+            android:drawableLeft="@drawable/icon_facebook"
+            android:drawablePadding="-12dp"
+            android:paddingLeft="24dp"
+            android:text="@string/connect_with_facebook"
+            android:textColor="@color/login_text_color"
+            android:textSize="13sp" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btn_facebook_sdk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pdf"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/fl_close_button_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#4D000000">
+
+                <Button
+                    android:id="@+id/btn_close_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:text="@string/nchide"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </FrameLayout>
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdf_viewer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fl_close_button_pdf" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

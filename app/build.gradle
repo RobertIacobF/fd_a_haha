@@ -1,0 +1,185 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        jcenter()
+    }
+
+    dependencies {
+        // The Fabric Gradle plugin uses an open ended version to react
+        // quickly to Android tooling updates
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.2'
+    }
+}
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'io.fabric'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/BCKEY.DSA'
+        exclude 'AUTHORS'
+        exclude 'META-INF/services/javax.annotation.processing.Processor' // butterknife
+        exclude 'META-INF/BCKEY.SF'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
+    }
+
+    defaultConfig {
+        applicationId "aroundwise.nepi"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 36
+        versionName "1.2.7"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //multiDexKeepFile file('multdex-config.txt')
+            proguardFile('multidex-config.pro')
+
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           // multiDexKeepFile file('multidex-config.txt')
+            proguardFile('multidex-config.pro')
+
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def apk = output.outputFile;
+            def newName;
+
+            if (variant.buildType.name == "release") {
+                newName = apk.name.replace("app-release", "-release-Nepi" + "-version_code-" + defaultConfig.versionCode + ".apk");
+            } else {
+                newName = apk.name.replace("app-debug.apk", "-Nepi" + "-v" + defaultConfig.versionName + ".apk");
+            }
+
+
+            output.outputFile = new File(apk.parentFile, newName);
+
+            if (variant.buildType.zipAlignEnabled) {
+                output.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
+            }
+
+            logger.info('INFO: Set outputFile to ' + output.outputFile + " for [" + variant.name + "]");
+        }
+    }
+
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+        transitive = true;
+    }
+
+    //BUTTERKNIFE
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    //MVP & ParcelablePlease & Adapter
+    apt 'com.hannesdorfmann.annotatedadapter:processor:1.1.1'
+    apt 'com.hannesdorfmann.parcelableplease:processor:1.0.2'
+    compile 'com.hannesdorfmann.annotatedadapter:annotation:1.1.1'
+    compile 'com.hannesdorfmann.annotatedadapter:support-recyclerview:1.1.1'
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
+    compile 'com.hannesdorfmann.parcelableplease:annotation:1.0.2'
+    compile 'com.hannesdorfmann.mosby:retrofit:1.1.0'
+
+    //AROUNDWISE SDK's
+    compile(name: 'aroundwisesdk', ext: 'aar')
+    compile(name: 'aroundwisecards', ext: 'aar')
+
+    //GOOGLE
+    //compile 'com.google.gms:google-services:2.1.2'
+    compile 'com.google.android.gms:play-services-maps:9.8.0'
+    compile 'com.google.android.gms:play-services-gcm:9.8.0'
+    compile 'com.google.android.gms:play-services-location:9.8.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.google.maps.android:android-maps-utils:0.4.4'
+
+    //FACEBOOK
+    compile 'com.facebook.android:facebook-android-sdk:4.19.0'
+
+    //ANDROID
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:support-annotations:25.2.0'
+    compile "com.android.support:support-v13:25.2.0"
+
+    //RETROFIT&RxANDROID
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+
+    //UTIL
+    //compile 'com.lorentzos.swipecards:library:1.0.9@aar'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'com.github.jinatonic.confetti:confetti:1.0.0'
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.3-SNAPSHOT'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+    compile 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+    compile 'com.daprlabs.aaron:cardstack:0.3.1-beta0'
+    compile 'jp.wasabeef:blurry:2.1.0'
+    compile ('cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.2') {
+        exclude module: 'support-v4'
+    }
+    compile 'com.github.barteksc:android-pdf-viewer:2.5.1'
+    compile 'com.flurgle:camerakit:0.9.17'
+
+    //BeaconSDk needed
+    compile 'me.relex:circleindicator:1.1.5@aar'
+    compile 'org.altbeacon:android-beacon-library:2.+@aar'
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+
+    //YOUTUBE
+    compile 'com.google.apis:google-api-services-youtube:v3-rev180-1.22.0'
+
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+
+
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.google.gms.google-services'

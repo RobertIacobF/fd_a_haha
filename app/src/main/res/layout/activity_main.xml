@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.mainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_image_login" />
+
+
+
+        <aroundwise.nepi.util.views.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <aroundwise.nepi.util.views.CirclePageIndicator
+            android:id="@+id/viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="20dp"
+            android:padding="2dp"
+            android:paddingTop="60dp"
+            app:fillColor="@color/pager_on"
+            app:pageColor="@color/pager_off"
+            app:strokeColor="@color/pager_on"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_aha" />
+
+
+</RelativeLayout>

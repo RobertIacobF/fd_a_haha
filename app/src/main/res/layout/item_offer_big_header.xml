@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offer_header"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:elevation="1dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/iv_offer_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp" />
+
+    <TextView
+        android:id="@+id/tv_offer_owner"
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toLeftOf="@+id/iv_offer_mall_logo"
+        android:layout_toRightOf="@+id/iv_offer_logo"
+        android:singleLine="true"
+
+        android:textColor="#3b3b3b"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_offer_mall_logo"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <aroundwise.nepi.util.views.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        app:actionbarTitle="@string/near_you_caps"
+        app:hasSearch="false"
+        app:hasSpinner="false" />
+
+
+    <com.daprlabs.cardstack.SwipeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swiperFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.daprlabs.cardstack.SwipeDeck
+            android:id="@+id/swipe_deck"
+            android:layout_width="260dp"
+            android:layout_height="430dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:visibility="visible"
+            swipedeck:card_spacing="5dp"
+            swipedeck:max_visible="1"
+            swipedeck:render_above="true"
+            swipedeck:rotation_degrees="15" />
+
+        <ImageView
+            android:layout_width="330dp"
+            android:layout_height="290dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:elevation="5dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/under_cards" />
+
+    </com.daprlabs.cardstack.SwipeFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/fl_open_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:background="@drawable/icon_near_you_background"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_open_bluetooth" />
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/icon_near_you_bluetooth" />
+
+        <TextView
+            android:id="@+id/tvFirst"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIcon"
+            android:layout_centerHorizontal="true"
+            android:text="@string/porne_te_bluetooth_ul"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvsecond"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFirst"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="@string/prime_te_puncte_i_informa_ii_din_jurul_t_u"
+            android:textColor="#9f9f9f"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scanning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:background="@drawable/icon_near_you_background"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_scanner_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/iv_scanner_background" />
+
+        <ImageView
+            android:id="@+id/iv_scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/iv_scanner_circle" />
+
+        <TextView
+            android:id="@+id/tv_scanning"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_scanner"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="42dp"
+            android:text="@string/scanning"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_looking"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_scanning"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:text="@string/looking_for_special_offers_and_deals" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

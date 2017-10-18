@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/shop_filter_btn_filter"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_filter_button"
+            android:text="@string/filtreaz_oferta"
+            android:textColor="@color/filter_text_color" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/shop_filter_btn_close"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/icon_filter_close_button" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_buttons"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/shop_filter_rl_gender"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_background_filter">
+
+                    <TextView
+                        android:id="@+id/gender_title"
+                        style="@style/settings_account_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gender_title">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:background="@drawable/icon_filter_dropdown_arrow" />
+
+                        <Spinner
+                            android:id="@+id/gender_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:background="#00000000" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    style="@style/settings_separator_style"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shop_filter_rl_deal_type"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_below="@+id/shop_filter_rl_gender"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/deal_type_title"
+                        style="@style/settings_account_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deal_type" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deal_type_title">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:background="@drawable/icon_filter_dropdown_arrow" />
+
+                        <Spinner
+                            android:id="@+id/spinner_deal_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:background="#00000000" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    style="@style/settings_separator_style"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shop_filter_rl_location"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_below="@+id/shop_filter_rl_deal_type"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/location_title"
+                        style="@style/settings_account_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location" />
+
+                    <EditText
+                        android:id="@+id/shop_filter_et_location"
+                        style="@style/settings_account_editable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/location_title"
+                        android:background="#00000000"
+                        android:hint="Zipcode or Location Identifier" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/settings_separator_style"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shop_filter_rl_category"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_below="@id/shop_filter_rl_location"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/category_title"
+                        style="@style/settings_account_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/category_title">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:background="@drawable/icon_filter_dropdown_arrow" />
+
+                        <Spinner
+                            android:id="@+id/spinner_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:background="#00000000" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    style="@style/settings_separator_style"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/shop_filter_rl_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_filter_rl_category"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/shop_filter_tv_radius"
+                    style="@style/FilterTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/radius" />
+
+                <TextView
+                    android:id="@+id/shop_filter_radius_min"
+                    style="@style/FilterTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shop_filter_tv_radius"
+                    android:layout_marginTop="15dp"
+                    android:text="0KM"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/shop_filter_radius_max"
+                    style="@style/FilterTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/shop_filter_tv_radius"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="15dp"
+                    android:text="200KM"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <org.florescu.android.rangeseekbar.RangeSeekBar
+                    android:id="@+id/shop_filter_seekbar_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shop_filter_tv_radius"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="39dp"
+                    app:activeColor="#f84d60"
+                    app:barHeight="11dp"
+                    app:defaultColor="#ebebeb"
+                    app:showLabels="false"
+                    app:thumbDisabled="@drawable/icon_thumb_rangeseek"
+                    app:thumbNormal="@drawable/icon_thumb_rangeseek"
+                    app:thumbPressed="@drawable/icon_thumb_rangeseek"
+                    app:valuesAboveThumbs="false" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

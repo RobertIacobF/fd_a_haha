@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <aroundwise.nepi.util.views.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <ImageView
+            android:id="@+id/iv_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <aroundwise.nepi.util.views.CirclePageIndicator
+            android:id="@+id/viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_mall_location"
+            android:layout_marginBottom="30dp"
+            android:padding="2dp"
+            app:fillColor="@color/pager_on"
+            app:pageColor="@color/pager_off"
+            app:strokeColor="@color/pager_on"
+            app:strokeWidth="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mall_location"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/viewpager"
+            android:background="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/iv_store_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+               />
+
+            <TextView
+                android:id="@+id/tv_store_location"
+                style="@style/tv_dialog_store_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/iv_store_logo"
+
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_dialog_store_info_right_arrow" />
+
+            <TextView
+                android:id="@+id/tv_dialog_arrog"
+                style="@style/tv_dialog_store_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/iv_arrow" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

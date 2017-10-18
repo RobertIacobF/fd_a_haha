@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aroundwise.nepi.activities.discoverActivity.DiscoverActivity">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp" />
+
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        app:layout_anchorGravity="bottom">
+
+        <RelativeLayout style="@style/main_tab_style1">
+
+            <Button
+                android:id="@+id/main_tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:drawableTop="@drawable/selector_tab_1"
+                android:text="@string/browse"
+                android:textAllCaps="false"
+                android:textSize="8sp" />
+
+            <View
+                android:id="@+id/main_tab1_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_style1">
+
+            <View
+                android:id="@+id/main_tab2_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/main_tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:drawableTop="@drawable/selector_tab_2"
+                android:gravity="center"
+                android:text="@string/near_you"
+                android:textColor="@color/tab_non_selected_color"
+                android:textSize="8sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/main_tab2"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp">
+
+                <ImageButton
+                    android:id="@+id/bubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:src="@drawable/icon_red_circle" />
+
+                <TextView
+                    android:id="@+id/tv_bubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="12"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_style1">
+
+            <View
+                android:id="@+id/main_tab3_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/main_tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:drawableTop="@drawable/selector_tab_3"
+                android:text="@string/magazin"
+                android:textColor="@color/tab_non_selected_color"
+                android:textSize="8sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_style1">
+
+            <View
+                android:id="@+id/main_tab4_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_loyalty_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/tab_non_selected_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_loyalty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="7dp"
+                android:text="@string/loyalty"
+                android:textAllCaps="true"
+                android:textColor="@color/tab_non_selected_color"
+                android:textSize="8sp" />
+
+            <Button
+                android:id="@+id/main_tab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_style1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/selector_tab_4"
+                android:textColor="#8d9295"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="7dp"
+                android:text="@string/profile"
+                android:textAllCaps="true"
+                android:textColor="#8d9295"
+                android:textSize="8sp" />
+
+            <Button
+                android:id="@+id/main_tab5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+
+                />
+
+            <View
+                android:id="@+id/main_tab5_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

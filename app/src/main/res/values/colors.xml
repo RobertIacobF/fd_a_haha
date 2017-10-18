@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#828282</color>
+    <color name="colorPrimaryDark">#828282</color>
+    <color name="colorAccent">#828282</color>
+
+    <color name="pager_off">#ababb0</color>
+    <color name="pager_on">#fff</color>
+
+    <color name="stroke_button_login">#ababb0</color>
+    <color name="login_text_color">#fff</color>
+    <color name="login_facebook_button">#188fe3</color>
+    <color name="gray_select_mall">#c2c1c3</color>
+    <color name="overlay_choose_mall">#E0a3a3a8</color>
+
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="transparent_white">#01ffffff</color>
+
+
+    <!-- OnBoarding -->
+    <color name="white_overlay">#E6ffffff</color>
+    <color name="pink_gradient_top">#f80a7a</color>
+    <color name="pink_gradient_bottom">#f80a50</color>
+    <color name="gray_learn_more">#827c7d</color>
+
+    <!-- Discover -->
+
+    <color name="pink_heart">#f80a4d</color>
+    <color name="tab_non_selected_color">#4D000000</color>
+    <!-- #67605f old unselected color -->
+    <color name="tab_selected_color">#000</color>
+    <color name="fill_top_pager">#fff</color>
+    <color name="fill_bottom_pager">#000</color>
+
+    <!-- Offer Fragment-->
+    <color name="tab_bottom">#333333</color>
+
+
+    <!-- Filter Fragment -->
+    <color name="filter_text_color">#f80b3d</color>
+    <color name="editable_text_color">#333333</color>
+    <color name="separator_profile_color">#ebebeb</color>
+    <color name="text_color_light_gray">#949494</color>
+
+    <!-- Loyalty fragment-->
+    <color name="appbar_title_color_dark">#333333</color>
+    <color name="appbar_title_color_white">#fff</color>
+    <color name="text_get_points">#909ca4</color>
+    <color name="schimba_cadoul_color">#deb9d2</color>
+
+    <!-- Stores fragment -->
+    <color name="top_stroke">#b0a6b7</color>
+    <color name="tv_km_away">#a9b3c4</color>
+    <color name="tv_km_away_black_with_alpha">#8Affffff</color>
+    <color name="tv_get_points_spend">#3b3b3b</color>
+    <color name="tv_points_number">#f80a4d</color>
+    <color name="tv_dollars">#949494</color>
+
+    <!-- Dialog store info -->
+    <color name="tv_store_info_color">#bbbbbb</color>
+
+    <!-- Camera Preview-->
+    <color name="camera_green_line">#94e90d</color>
+    <color name="black_transparent">#60000000</color>
+
+    <color name="reward_header_white">#E0e4e3e3</color>
+    <color name="pink_progress_bar_fill">#f80a7a</color>
+    <color name="pink_progress_bar">#fecedc</color>
+
+    <color name="offer_title_color">#3b3b3b</color>
+    <color name="divider_color">#e3e3e3</color>
+
+    <color name="white50alpha">#80ffffff</color>
+    <color name="black50alpha">#80000000</color>
+    <color name="black30alpha">#4D000000</color>
+</resources>

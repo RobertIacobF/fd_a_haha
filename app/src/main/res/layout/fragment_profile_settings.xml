@@ -1,0 +1,433 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aroundwise.nepi.activities.discoverActivity.fragments.profileFragment.fragments.ProfileSettingsFragment">
+
+    <RelativeLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs_scroll_view"
+        android:background="@color/black_transparent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <aroundwise.nepi.util.views.CustomActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white"
+            android:elevation="3dp"
+            app:actionbarTitle="@string/settings_caps"
+            app:hasBackButton="true"
+            app:hasOkButton="true"
+            app:hasSearch="false"
+            app:hasSpinner="false" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionbar"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_profile_settings"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:background="#f7f7f7">
+
+                        <ImageButton
+                            android:id="@+id/btn_retake"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:clickable="true"
+                            android:src="@drawable/icon_profile_settings_retake" />
+
+                        <View
+                            android:id="@+id/centerView"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="60dp"
+                            android:layout_height="54dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:background="@drawable/shape_background_filter"
+                            android:src="@drawable/icon_profile_settings_avatar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/centerView"
+                            android:text="@string/schimb_poza"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            style="@style/label_profile_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/first_name_caps" />
+
+                        <EditText
+                            android:id="@+id/tv_first_name"
+                            style="@style/label_value_profile_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/please_type_your_first_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:text="Johanna" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            style="@style/label_profile_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/last_name_caps" />
+
+                        <EditText
+                            android:id="@+id/tv_last_name"
+                            style="@style/label_value_profile_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/please_type_your_last_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            style="@style/label_profile_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/birth_date_caps" />
+
+                        <EditText
+                            android:id="@+id/et_datepicker"
+                            style="@style/label_value_profile_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/seteaz_o_zi"
+                            android:imeOptions="actionNext" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            style="@style/label_profile_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email_caps" />
+
+                        <EditText
+                            android:id="@+id/tv_email"
+                            style="@style/label_value_profile_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:hint="@string/please_type_your_email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:text="Johanna@gmail.com" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/label_profile_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:text="@string/telefon" />
+
+                        <EditText
+                            android:id="@+id/et_phone"
+                            style="@style/label_value_profile_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Introduceti telefon"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:padding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/btn_ch_passowrd"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/label_profile_settings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/password_caps" />
+
+                            <EditText
+                                android:id="@+id/tv_password"
+                                style="@style/label_value_profile_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/please_type_your_first_name"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:text="123456" />
+
+                        </LinearLayout>
+
+                        <aroundwise.nepi.util.views.SAutoBgButton
+                            android:id="@+id/btn_ch_passowrd"
+                            style="@style/label_profile_settings"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_transparent_with_stroke_button"
+                            android:text="@string/change" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/label_profile_settings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cod_corporate" />
+
+                            <EditText
+                                android:id="@+id/et_coupon"
+                                style="@style/label_value_profile_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@android:color/transparent"
+                                android:hint="Introduceti codul"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPersonName" />
+                        </LinearLayout>
+
+                        <aroundwise.nepi.util.views.SAutoBgButton
+                            android:id="@+id/btn_adauga"
+                            style="@style/label_profile_settings"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_transparent_with_stroke_button"
+                            android:text="@string/adauga" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="3dp">
+
+                    <Button
+                        android:id="@+id/btn_male"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_gender_left"
+                        android:tag="@string/male"
+                        android:text="@string/masculin" />
+
+                    <Button
+                        android:id="@+id/btn_female"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_gender_right"
+                        android:tag="@string/female"
+                        android:text="@string/feminin" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <aroundwise.nepi.util.views.SAutoBgButton
+                            android:id="@+id/btn_next"
+                            fontPath="fonts/ProximaNova-Semibold.otf"
+                            android:layout_width="200dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_pink_rounded_button"
+                            android:drawablePadding="-30dp"
+                            android:drawableRight="@drawable/icon_arrow_right"
+                            android:paddingRight="30dp"
+                            android:text="@string/save"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/glow_fulll" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#f7f7f7" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:visibility="visible">
+
+                    <aroundwise.nepi.util.views.SAutoBgButton
+                        android:id="@+id/btn_log_out"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_grey_rounded_button"
+                        android:text="@string/log_out"
+                        android:textColor="@color/gray_learn_more" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_terms_and_coniditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_politica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/politic_de_confiden_ialitate"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/delete_account_message"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

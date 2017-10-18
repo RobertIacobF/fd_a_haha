@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <aroundwise.nepi.util.views.SAutoBgButton
+        android:id="@+id/btn_close_dialog"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dialog_reward_close_button" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_close_dialog"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_reward"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/beats" />
+
+        <TextView
+            android:id="@+id/tv_received"
+            fontPath="fonts/ProximaNova-Regular.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_reward"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="@string/you_received_a_reward"
+            android:textColor="@color/tv_dollars" />
+
+        <TextView
+            android:id="@+id/tv_reward_name"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_received"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Beats by Dre"
+            android:textColor="@color/tv_dollars"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_from"
+            fontPath="fonts/ProximaNova-Regular.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reward_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/from"
+            android:textColor="@color/tv_dollars" />
+
+        <ImageView
+            android:id="@+id/iv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_from"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_istyle" />
+
+        <include
+            android:id="@+id/redeem"
+            layout="@layout/item_reward_reedem_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/iv_from"
+            android:layout_marginTop="20dp" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_next"
+            fontPath="fonts/ProximaNova-Semibold.otf"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/redeem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_pink_rounded_button"
+            android:text="@string/thank_you"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

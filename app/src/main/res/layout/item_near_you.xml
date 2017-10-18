@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="460dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_cards"
+    android:elevation="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/shape_image_near_you"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_close_to"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_item"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/you_are_close_to"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_close_to"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_store_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="@string/from"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_store_logo"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_from"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_store_logo"
+        android:layout_centerHorizontal="true">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_next"
+            fontPath="fonts/ProximaNova-Semibold.otf"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_pink_rounded_button"
+            android:drawablePadding="-30dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:paddingRight="30dp"
+            android:text="@string/detalii_caps"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/glow_fulll" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

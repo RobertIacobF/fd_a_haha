@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aroundwise.nepi.activities.cameraActivity.CameraActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextureView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/iv_capture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar" />
+
+        <View
+            android:id="@+id/left_bar"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white" />
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar"
+            android:background="@color/black_transparent" />
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar"
+            android:layout_alignParentRight="true"
+            android:background="@color/black_transparent" />
+
+        <View
+            android:id="@+id/right_bar"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:background="@color/white" />
+
+        <include
+            android:id="@+id/bottom_bar"
+            layout="@layout/layout_camera_preview_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_close_tips"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/icon_tips_close" />
+
+
+        <aroundwise.nepi.util.views.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <aroundwise.nepi.util.views.CirclePageIndicator
+            android:id="@+id/viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="170dp"
+            android:padding="2dp"
+            app:fillColor="@color/black"
+            app:pageColor="@color/pager_off"
+            app:strokeColor="@color/pager_on"
+            app:strokeWidth="0dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/cum_sa_scanezi" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_lets_go"
+            android:layout_width="220dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/icon_btn_lets_go_2" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:orientation="vertical">
+
+
+    <aroundwise.nepi.util.views.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </aroundwise.nepi.util.views.CustomViewPager>
+
+    <aroundwise.nepi.util.views.CirclePageIndicator
+        android:id="@+id/viewpager_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="1dp"
+        app:fillColor="@color/pager_on"
+        app:pageColor="@color/pager_off"
+        app:strokeColor="@color/pager_on"
+        app:strokeWidth="0dp" />
+
+
+
+</RelativeLayout>

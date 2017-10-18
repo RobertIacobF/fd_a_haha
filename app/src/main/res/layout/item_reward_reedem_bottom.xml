@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_reward_redeem"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <View
+        android:background="@color/gray_learn_more"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_show"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/show_the_code_to_the_cashier"
+        android:textColor="@color/gray_learn_more"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.4"
+        android:text="2466"
+        android:textColor="@color/tv_points_number"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>

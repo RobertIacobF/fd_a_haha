@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99f9336d">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="300dp"
+            android:layout_height="440dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shop_background">
+
+
+            <RelativeLayout
+                android:id="@+id/rlDonut"
+                android:layout_width="match_parent"
+                android:layout_height="225dp">
+
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/reward_progress"
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="36dp"
+                    android:rotation="-90"
+                    app:donut_finished_color="@color/pink_progress_bar_fill"
+                    app:donut_finished_stroke_width="3dp"
+                    app:donut_progress="0"
+                    app:donut_text_color="@android:color/transparent"
+                    app:donut_unfinished_color="@color/pink_progress_bar"
+                    app:donut_unfinished_stroke_width="3dp" />
+
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_crown" />
+
+                <TextView
+                    android:id="@+id/tv_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="20"
+                    android:textColor="@color/black"
+                    android:textSize="65sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_points"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-6dp"
+                    android:text="POINTS"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/dialog_contextual_tv_from"
+                style="@style/settings_account_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlDonut"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/account_settings_left_margin"
+                android:text="DE LA"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/dialog_contextual_iv_logo"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dialog_contextual_tv_from"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/store_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/dialog_contextual_iv_logo"
+                android:layout_centerHorizontal="true" />
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_contextual_iv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="60dp">
+
+                <aroundwise.nepi.util.views.SAutoBgButton
+                    android:id="@+id/btn_thank_you"
+                    fontPath="fonts/ProximaNova-Semibold.otf"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_pink_rounded_button"
+                    android:text="@string/thank_you"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/glow_fulll" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_confetii"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

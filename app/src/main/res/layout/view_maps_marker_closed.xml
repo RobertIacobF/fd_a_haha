@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="82dp"
+    android:layout_height="34dp"
+    android:background="@drawable/marker_bkg">
+
+
+    <TextView
+        android:id="@+id/marker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/custom_profile_padding"
+        android:paddingRight="@dimen/custom_profile_padding"
+        android:paddingBottom="3dp"
+        android:layout_centerInParent="true"
+        android:text="Test"
+        android:textColor="#FFFFFF"
+        />
+
+</RelativeLayout>

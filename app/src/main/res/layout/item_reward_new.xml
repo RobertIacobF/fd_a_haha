@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+
+    <ImageView
+        android:id="@+id/iv_reward_selected"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_selected_reward_arrow"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_reward"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/layout_reward"
+        android:layout_alignLeft="@+id/layout_reward"
+        android:layout_alignRight="@+id/layout_reward"
+        android:layout_alignTop="@+id/layout_reward"
+        android:background="@drawable/button_transparent_layout" />
+
+    <RelativeLayout
+        android:id="@+id/layout_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/iv_reward_selected"
+        android:background="@color/white"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/fl_reward">
+
+            <ImageView
+                android:id="@+id/iv_offer_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_offer_owner"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toLeftOf="@+id/iv_offer_mall_logo"
+                android:layout_toRightOf="@+id/iv_offer_logo"
+                android:singleLine="true"
+
+                android:textColor="#3b3b3b"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/iv_offer_mall_logo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rl_top"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/fl_reward"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_reward_name"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <ImageView
+                android:id="@+id/iv_reward_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_reward_name"
+                android:layout_below="@+id/tv_reward_name"
+                android:src="@drawable/icon_reward_points"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_points_value"
+                fontPath="fonts/ProximaNova-Semibold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reward_name"
+                android:layout_toRightOf="@id/iv_reward_points"
+
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_points"
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reward_name"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/tv_points_value"
+                android:text="@string/points"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_reward"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_rounded_corners_6dp_white_background">
+
+            <ImageView
+                android:id="@+id/iv_reward"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/shape_rounded_corners_6dp_white_background"
+                android:scaleType="centerCrop" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

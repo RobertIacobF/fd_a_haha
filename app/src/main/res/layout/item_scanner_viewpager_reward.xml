@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/reward_progress"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:rotation="-90"
+        app:donut_finished_color="#FFFFFF"
+        app:donut_finished_stroke_width="3dp"
+        app:donut_progress="70"
+        app:donut_text_color="#00000000"
+        app:donut_unfinished_color="#66ffffff"
+        app:donut_unfinished_stroke_width="3dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_reward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/RegisterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_reward"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="sad"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_puncte"
+        style="@style/RegisterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="sad"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        style="@style/RegisterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_puncte"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="@string/puncte"
+        android:textColor="@android:color/white"
+        android:textSize="8sp" />
+
+</RelativeLayout>

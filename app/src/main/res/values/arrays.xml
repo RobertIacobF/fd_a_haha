@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gender">
+        <item>Toate</item>
+        <item>Barbati</item>
+        <item>Femei</item>
+    </array>
+</resources>

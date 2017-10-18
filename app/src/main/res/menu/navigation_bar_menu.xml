@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_aha"
+        android:icon="@drawable/selector_tab_1"
+        android:title="@string/browse"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_in_zona"
+        android:icon="@drawable/selector_tab_2"
+        android:title="@string/browse"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_magazine"
+        android:icon="@drawable/selector_tab_3"
+        android:title="@string/browse"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_puncte"
+        android:actionLayout="@layout/navigation_menu_item_puncte"
+        android:title="@string/browse"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_profil"
+        android:icon="@drawable/selector_tab_4"
+        android:title="@string/browse"
+        app:showAsAction="ifRoom" />
+
+</menu>

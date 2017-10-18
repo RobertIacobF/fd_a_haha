@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/tv_product"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/shape_white_circle"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:elevation="5dp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_shadow" />
+
+    <TextView
+        android:id="@+id/tv_product"
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_points"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/iv_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/icon_logo_reward_points"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_points_nb"
+        fontPath="fonts/ProximaNova-Semibold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_selected"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:background="@drawable/shape_store_pin">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_store_marker_background">
+
+            <ImageView
+                android:id="@+id/iv_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_store_margin" />
+
+            <ImageView
+                android:id="@+id/iv_store"
+                fontPath="fonts/ProximaNova-Regular.otf"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_margin"
+            />
+
+            <LinearLayout
+                android:id="@+id/ll_directions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_margin"
+                android:layout_alignTop="@+id/iv_margin"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/iv_store"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:id="@+id/tv_getDirections"
+                    fontPath="fonts/ProximaNova-Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_directions"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    fontPath="fonts/ProximaNova-Regular.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_directions"
+                    android:textColor="@color/tv_dollars"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/icon_store_arrow" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

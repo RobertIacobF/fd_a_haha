@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <aroundwise.nepi.util.views.CustomViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                    <aroundwise.nepi.util.views.CirclePageIndicator
+                        android:id="@+id/viewpager_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/rl_mall_location"
+                        android:layout_marginBottom="30dp"
+                        android:padding="2dp"
+                        app:fillColor="@color/pager_on"
+                        app:pageColor="@color/pager_off"
+                        app:strokeColor="@color/pager_on"
+                        app:strokeWidth="0dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mall_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/viewpager"
+                        android:background="@color/white"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <ImageView
+                            android:id="@+id/iv_store_logo"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                             />
+
+                        <TextView
+                            android:id="@+id/tv_store_location"
+                            style="@style/tv_dialog_store_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@+id/iv_store_logo"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_dialog_store_info_right_arrow" />
+
+                        <TextView
+                            android:id="@+id/tv_dialog_arrog"
+                            style="@style/tv_dialog_store_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="6dp"
+                            android:layout_toLeftOf="@+id/iv_arrow" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_getpoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/rl_mall_location">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#B2ffffff" />
+
+                        <ImageView
+                            android:id="@+id/iv_getpoints_blurred"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/tv_store_get_points"
+                            style="@style/tv_store_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/get_points_caps"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/tv_store_get_points"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_get_points"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@+id/divider"
+                                android:background="@drawable/shape_store_details_get_points_right"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tv_stores_points_left"
+                                    style="@style/tv_stores_nr_points"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30"
+                                    android:textColor="#f80a4d" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/tv_stores_points_left"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/tv_stores_points"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#3b3b3b" />
+
+                                    <TextView
+                                        android:id="@+id/tv_for_action_left"
+                                        style="@style/tv_stores_for_action"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/for_1_purchase"
+                                        android:textColor="#3b3b3b" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+
+                            <View
+                                android:id="@+id/divider"
+                                android:layout_width="1px"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:background="#e8e8e8" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_walk_in"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toLeftOf="@+id/divider"
+                                android:background="@drawable/shape_store_details_get_points_left"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tv_stores_points_right"
+                                    style="@style/tv_stores_nr_points"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20"
+                                    android:textColor="#f80a4d" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/tv_stores_points_right"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        style="@style/tv_stores_points"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#3b3b3b" />
+
+                                    <TextView
+                                        android:id="@+id/tv_for_action_right"
+                                        style="@style/tv_stores_for_action"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/for_walk_ins"
+                                        android:textColor="#3b3b3b" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_rewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/rl_getpoints"
+                        android:background="#f2f2f2">
+
+                        <TextView
+                            android:id="@+id/tv_store_rewards"
+                            style="@style/tv_store_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rewards"
+                            android:textColor="#333"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_rewards"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/tv_store_rewards" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_offers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/tv_store_offers"
+                style="@style/tv_store_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offers"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_store_offers" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/overlay_top" />
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent">
+
+        <aroundwise.nepi.util.views.CustomActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            app:backBtnColor="@color/appbar_title_color_white"
+            app:hasBackBtnWhiteArrow="true"
+            app:hasBackButton="true"
+            app:hasSearch="false"
+            app:hasSpinner="false"
+            app:titleColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="6dp"
+            android:src="@drawable/icon_store_info" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

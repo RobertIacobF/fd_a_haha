@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offer_likes"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_like_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_like_photo" />
+
+    <TextView
+        android:id="@+id/tv_like_text"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/iv_like_photo"
+        android:text="Christine Rose"
+        android:textColor="@color/black" />
+
+    <TextView
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/tv_like_text"
+        android:text="apreciaza" />
+
+</RelativeLayout>

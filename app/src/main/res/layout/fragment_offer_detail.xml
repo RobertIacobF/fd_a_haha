@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <aroundwise.nepi.util.views.SAutoBgButton
+        android:id="@+id/btn_back"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/icon_back_with_text"
+        android:paddingTop="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/offer_detail_bottom_description"
+                layout="@layout/item_offer_detail_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_header" />
+
+            <TextView
+                fontPath="fonts/ProximaNova-Light.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_detail_bottom_description"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/white"
+                android:lineSpacingExtra="0.36pt"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:text="*\nPreturile si disponibilitatea produsului pot suferi modificari de la data publicarii lor (in aceasta aplicatie). Va recomandam sa verificati in magazin informatiile legate de disponibilitate si preturi."
+                android:textColor="@color/offer_title_color"
+                android:textSize="10sp" />
+
+            <include
+                android:id="@+id/offer_header"
+                layout="@layout/item_offer_big_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainView" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_above="@+id/offer_detail_bottom_description"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="440dp"
+                android:layout_alignParentTop="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_videoview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone">
+
+                    <com.google.android.youtube.player.YouTubeThumbnailView
+                        android:id="@+id/videoview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_play"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_play_video"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+
+                </RelativeLayout>
+
+
+                <aroundwise.nepi.util.views.SAutoBgButton
+                    android:id="@+id/btn_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/selector_button_offer_details_heart" />
+
+                <aroundwise.nepi.util.views.SAutoBgButton
+                    android:id="@+id/btn_share_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/icon_offer_detail_share" />
+
+
+                <aroundwise.nepi.util.views.CustomViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/rl_videoview" />
+
+                <include
+                    android:id="@+id/badge_2"
+                    layout="@layout/layout_badge_discount"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/badge_1" />
+
+                <include
+                    android:id="@+id/badge_1"
+                    layout="@layout/layout_badge_discount"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="@bool/default_circle_indicator_centered"
+                    android:background="@drawable/overlay_bottom" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/overlay_top" />
+
+                <aroundwise.nepi.util.views.CirclePageIndicator
+                    android:id="@+id/viewpager_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="40dp"
+                    android:padding="2dp"
+                    android:paddingTop="60dp"
+                    app:fillColor="@color/pager_on"
+                    app:pageColor="@color/pager_off"
+                    app:strokeColor="@color/pager_on"
+                    app:strokeWidth="0dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

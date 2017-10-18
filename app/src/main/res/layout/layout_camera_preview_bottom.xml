@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/top"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="Asigură-te că incluzi: totalul, data,\n RL, CIF și că poza este făcută în mod portret"
+        android:textColor="@android:color/white"></TextView>
+
+    <RelativeLayout
+        android:id="@+id/rl_take_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:background="@android:color/white"
+        android:visibility="visible">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_take_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_take_photo" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/icon_camera_cancel_btn" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_tips"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/icon_camera_tips_button" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_finished"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_finished"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_camera_finished_button" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_retake"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/icon_camera_retake_button" />
+
+        <aroundwise.nepi.util.views.SAutoBgButton
+            android:id="@+id/btn_add"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/icon_camera_add_button"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

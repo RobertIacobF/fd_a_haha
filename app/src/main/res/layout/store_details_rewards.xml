@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_rewards"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#f2f2f2">
+
+        <TextView
+            android:id="@+id/tv_store_rewards"
+            style="@style/tv_store_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rewards"
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_rewards"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tv_store_rewards" />
+
+
+        <TextView
+            android:id="@+id/tv_store_offers"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_rewards"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/offers"
+            android:textColor="#313131"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</FrameLayout>

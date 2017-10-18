@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/rl_top_preview" />
+
+    <View
+        android:id="@+id/left_bar"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl_top_preview"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/right_bar"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_top_preview"
+        android:layout_marginRight="40dp"
+        android:background="@color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/iv_preview"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/iv_preview"
+            android:layout_alignParentRight="true"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/iv_preview"
+            android:layout_alignLeft="@+id/iv_preview"
+            android:layout_alignRight="@+id/iv_preview"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/camera_green_line" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/iv_preview"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/iv_preview"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/layout_camera_preview_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

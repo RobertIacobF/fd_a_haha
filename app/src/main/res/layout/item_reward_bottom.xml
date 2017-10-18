@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_reward_title"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_points"
+            android:ellipsize="end"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:text="400 RON Fresh Outfit"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_reward_description"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_reward_title"
+            android:ellipsize="end"
+            android:padding="3dp"
+            android:text="Influente punk si artizanale in noua colectie as"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_points"
+            fontPath="fonts/ProximaNova-Semibold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="3dp"
+            android:text="300 points"
+            android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

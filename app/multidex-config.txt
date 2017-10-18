@@ -1,0 +1,2 @@
+uk/co/chrisjenx/calligraphy/CalligraphyConfig.class
+com/squareup/picasso/Picasso.class

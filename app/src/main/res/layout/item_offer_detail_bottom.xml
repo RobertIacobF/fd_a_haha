@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offer_bottom_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_offer_title"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_points"
+            android:padding="3dp"
+            android:text="400 RON Fresh Outfit"
+            android:textColor="@color/offer_title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_offer_description"
+            fontPath="fonts/ProximaNova-Light.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_offer_title"
+            android:lineSpacingExtra="0.36pt"
+            android:padding="3dp"
+            android:text="Influente punk si artizanale in noua colectie asInfluente punk si artizanale in noua colectie as"
+            android:textColor="@color/offer_title_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_points"
+            fontPath="fonts/ProximaNova-Semibold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="3dp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:paddingBottom="16dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:id="@+id/iv_heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="3dp"
+            android:src="@drawable/selector_like_image" />
+
+        <TextView
+            android:id="@+id/tv_likes"
+            fontPath="fonts/Montserrat-Regular.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/iv_heart"
+            android:text="52"
+            android:textColor="@color/pink_heart" />
+
+        <Button
+            android:id="@+id/btn_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_heart"
+            android:layout_alignLeft="@+id/iv_heart"
+            android:layout_alignRight="@+id/tv_likes"
+            android:layout_alignTop="@+id/iv_heart"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:src="@drawable/icon_location" />
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/iv_location"
+            android:layout_alignLeft="@+id/iv_location"
+            android:layout_alignRight="@+id/iv_location"
+            android:layout_alignTop="@+id/iv_location"
+            android:background="@android:color/transparent" />
+
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/iv_location"
+            android:padding="3dp"
+            android:src="@drawable/icon_share" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/iv_share"
+            android:layout_alignLeft="@+id/iv_share"
+            android:layout_alignRight="@+id/iv_share"
+            android:layout_alignTop="@+id/iv_share"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

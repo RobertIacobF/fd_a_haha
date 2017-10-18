@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_reward_header"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/reward_header_white"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <Button
+        android:id="@+id/actionbar_btn_back"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/icon_loyalty_back_arrow"
+        android:text="@string/back"
+        android:textColor="@color/appbar_title_color_dark"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/show_the_code_to_the_cashier"
+        android:textColor="@color/gray_learn_more"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        fontPath="fonts/ProximaNova-Light.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.4"
+        android:text="2466"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_expire"
+        fontPath="fonts/ProximaNova-Regular.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_code"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:textColor="@color/gray_learn_more"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

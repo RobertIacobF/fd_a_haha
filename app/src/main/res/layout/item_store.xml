@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_store"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <aroundwise.nepi.util.views.SAutoBgButton
+        android:id="@+id/btn_store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_transparent_layout" />
+
+
+    <ImageView
+        android:id="@+id/iv_store_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_store_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_store_item">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/top_stroke" />
+
+            <ImageView
+                android:id="@+id/iv_store_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/icon_nike_logo" />
+
+            <TextView
+                android:id="@+id/tv_store_name"
+                fontPath="fonts/ProximaNova-Semibold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/tv_store_km"
+                android:layout_toRightOf="@+id/iv_store_logo"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/nike"
+                android:textAllCaps="false"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_store_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12dp"
+                android:text="@string/km_away"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_store_header"
+            android:background="@drawable/shape_store_item_bottom" />
+
+        <RelativeLayout
+            android:id="@+id/rl_store_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_store_header"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_stores_points_left"
+                style="@style/tv_stores_nr_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_stores_points_left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/left_puncte_label"
+                    style="@style/tv_stores_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_for_action"
+                    style="@style/tv_stores_for_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_walk_ins" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlmiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_stores_points_center"
+                    style="@style/tv_stores_nr_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_stores_points_center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/right_puncte_label"
+                        style="@style/tv_stores_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_for_action_center"
+                        style="@style/tv_stores_for_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/for_1_purchase" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_store_mall_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_stores_promenada_logo" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
